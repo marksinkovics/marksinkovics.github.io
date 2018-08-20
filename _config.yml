@@ -1,1 +1,26 @@
-theme: jekyll-theme-minimal
+title: Mark Sinkovics
+email: sinkovics.mark@gmail.com
+description: >
+  This website contains my experiences around programming and managing
+baseUrl: ""
+url: "https://marksinkovics.github.io"
+
+# theme: jekyll-theme-minimal
+# github: [metadata]
+plugins:
+  - "jekyll-github-metadata"
+  - jemoji
+
+# Build settings
+sass:
+  sass_dir: _sass
+include: ['_pages']
+kramdown:
+  input: GFM
+
+# Collection
+# collections_dir: my_collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
