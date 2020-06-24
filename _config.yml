@@ -1,7 +1,7 @@
 title: Mark Sinkovics
 email: sinkovics.mark@gmail.com
 description: >
-  This website contains my experiences around programming and managing
+  This website contains my experiences around programming
 baseUrl: ""
 url: "https://marksinkovics.github.io"
 
@@ -19,7 +19,6 @@ kramdown:
   input: GFM
 
 # Collection
-# collections_dir: my_collections
 collections:
   projects:
     output: true
