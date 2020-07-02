@@ -1,11 +1,7 @@
-body {
-    margin: 0;
-    color: $font-color;
-    font-family: $font-style;
-    font-size: 1.1em;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+* {
+    box-sizing: border-box;
 }
+
 h1,
 h2,
 h3 {
@@ -13,7 +9,10 @@ h3 {
     color: $heading-font-color;
     font-family: $heading-font;
     line-height: 1.5;
-}
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 h1 {
     color: $main;
     font-size: 2.5em;
@@ -26,88 +25,164 @@ h1 {
 h2 {
     font-size: 2em;
 }
+
 a,
 a:visited {
     color: $link-color;
     text-decoration: underline;
     font-weight: bold;
 }
+
 a:hover {
     color: $link-hover-color;
     text-decoration: underline;
 }
-header {
-    background: $header;
-    padding: 0px 15px;
-    text-align: center;
-    margin: 50px 0 0;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $font-color;
+    font-family: $font-style;
+    font-size: 1.1em;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
-main {
-    padding: 0 15px;
-    max-width: $content-width;
-    margin: 0 auto;
-}
-time {
-    color: #898989;
-}
+
 .container {
-    max-width: $content-width;
-    margin: 0 auto;
+    width: calc(100% - 250px);
+    height: calc(100% - $header-height);
+    margin-left: 250px;
+    margin-top: $header-height;
+    margin-left: 250px;
+    transition: 0.5s;
+    padding: 15px;
 }
 
-/* Aside */
-
-aside {
+.nav-panel {
     position: fixed;
-    top: 0;
-    left: 0;
-    background: #fff;
-    width: 100%;
-    z-index: 2;
-    border-bottom: 1px solid lighten($light, 30%);
-    box-shadow: 0px 1px 1px RGBA(4, 25, 54, .1);
-    nav {
-        float: left;
-        max-width: 800px;
-        margin: 0 auto;
-        ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            li {
-                float: left;
-                position: relative;
-                a {
-                    text-decoration: none;
-                    display: block;
-                    padding: 15px;
-                    font-family: 'Muli', sans-serif;
-                    line-height: 20px;
-                    margin-bottom: -1px;
-                    box-shadow: 0;
-                    &:hover,
-                    &:active {
-                        background: $header;
-                        text-decoration: none;
-                        color: $main;
-                    }
-                }
-            }
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    height: 100%;
+    background-color: $menu-background-color;
+    position: fixed;
+    transition: 0.5s;
+    padding-top: $header-height;
+
+    a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.5s;
+
+        &:hover {
+            color: $link-hover-color;
         }
-        &:after {
-            content: '';
-            display: table;
-            clear: both;
+
+        &.active {
+            color: $link-hover-color;
         }
     }
+
+    .closebtn {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
 }
+
+.header {
+    position: fixed;
+    top: 0px;
+    height: $header-height;
+    left: 250px;
+    width: calc(100% - 250px);
+    background-color: #f1f1f1;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+    align-items: center;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .hamburger-menu-button {
+        display: none;
+    }
+
+    * {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.row {
+    overflow-x: inherit;
+}
+
+.cover {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+    position: fixed;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-panel {
+        left: -250px;
+        .closebtn {
+            display: block;
+        }
+    }
+
+    .nav-panel-open {
+        left: 0px;
+    }
+
+    .header {
+        width: 100%;
+        left: 0;
+        .hamburger-menu-button {
+            display: block;
+        }
+    }
+
+    .header-open {
+        width: 100%;
+        left: 250px;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .container-open {
+        width: 100%;
+        margin-left: 250px;
+    }
+
+    .row-open {
+        overflow-x: hidden;
+    }
+
+    .cover-open {
+        left: 250px;
+        display: block;
+    }
+}
+
 footer {
+    padding-top: 15px;
     font-size: 0.9em;
-    text-align: center;
-    padding: 40px;
+    text-align: left;
+    height: $header-height;
 }

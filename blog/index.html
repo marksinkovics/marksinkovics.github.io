@@ -1,10 +1,10 @@
 ---
 layout: default
+title: Blog
 ---
 
-<h4>Blog</h4>
 {% assign psize = site.posts | size %}
-{% if psize == 0 %} 
+{% if psize == 0 %}
       <p>No posts ... yet.</p>
 {% else %}
     {% for post in site.posts %}

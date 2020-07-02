@@ -9,4 +9,39 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        function closeNavigation() {
+            document.getElementById("container").classList.remove("container-open")
+            document.getElementById("header").classList.remove("header-open")
+            document.getElementById("nav-panel").classList.remove("nav-panel-open")
+            document.getElementById("row").classList.remove("row-open")
+            document.getElementById("cover").classList.remove("cover-open")
+        }
+        function openNavigation() {
+            document.getElementById("container").classList.add("container-open")
+            document.getElementById("header").classList.add("header-open")
+            document.getElementById("nav-panel").classList.add("nav-panel-open")
+            document.getElementById("row").classList.add("row-open")
+            document.getElementById("cover").classList.add("cover-open")
+        }
+
+        function page(urlString) {
+            const url = new URL(urlString);
+            const components = url.pathname.split('/');
+            console.log(`url ${url} pathname: ${url.pathname} components: ${JSON.stringify(components)}`);
+            return components[1];
+        }
+
+        function setActive() {
+            linkObj = document.getElementById('nav-panel').getElementsByTagName('a');
+            path = document.location.href;
+            for (i = 0; i < linkObj.length; i++) {
+                if (page(document.location.href) === page(linkObj[i].href)) {
+                    linkObj[i].classList.add("active");
+                }
+            }
+        }
+        window.onload = setActive;
+    </script>
 </head>

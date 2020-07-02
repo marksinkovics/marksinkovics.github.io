@@ -1,11 +1,9 @@
 ---
 layout: page
-title: Sudoku - a puzzle game
+title: Privacy Policy for Sudoku - a puzzle game
 permalink: /projects/sudoku/privacy-policy
 type: sub
 ---
-
-## Privacy Policy
 
 ### Overview
 

@@ -1,20 +1,28 @@
-$content-width: 800px;
-// $main: #19CCAA;
-$main: #EACB00;
 $font-style: 'Open Sans', sans-serif;
 $font-color: #262626;
-$link-color: #425469;
-$link-hover-color: $main;
+
 $heading-font: 'Muli', sans-serif;
 $heading-font-color: #425469;
-$light: #E7EDF4;
-// $header:  #1D1425;
-$header:  #01172F;
 
-*,
-*::before,
-*::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+$menu-background-color: #0D1821;
+
+$main: #EACB00;
+
+// $content-width: 800px;
+// // $main: #19CCAA;
+// $main: #EACB00;
+$link-color: #767b81;
+$link-hover-color: $main;
+// $light: #E7EDF4;
+// // $header:  #1D1425;
+// $header:  #01172F;
+// $sidenav-width: 250px;
+$header-height: 65px;
+
+// *,
+// *::before,
+// *::after {
+//     -webkit-box-sizing: border-box;
+//     -moz-box-sizing: border-box;
+//     box-sizing: border-box;
+// }

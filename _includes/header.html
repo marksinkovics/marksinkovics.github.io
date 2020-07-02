@@ -1,21 +1,13 @@
-<aside>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="{{ "/" | prepend: site.baseurl }}">Home</a></li>
-                {% for page in site.pages %}
-                    {% if page.title %}
-                        <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-                <li><a href="{{ "/blog" | prepend: site.baseurl }}">Blog</a></li>
-            </ul>
-            </li>
-            </ul>
-        </nav>
+<div class="nav-panel" id="nav-panel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNavigation()">&times;</a>
+    <a href="{{ "/" | prepend: site.baseurl }}">Home</a>
+    {% for page in site.pages %}
+        {% if page.title %}
+            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        {% endif %}
+    {% endfor %}
+    <div class="header" id="header">
+        <span class="hamburger-menu-button" style="font-size:30px;cursor:pointer" onclick="openNavigation()">&#9776;</span>
+        <h2>{{ page.title }}</h2>
     </div>
-</aside>
-
-<header>
-    <h1><a href="{{ site.baseurl }}">{{ site.title }}</a></h1>
-</header>
+</div>
