@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
@@ -29,7 +29,6 @@
         function page(urlString) {
             const url = new URL(urlString);
             const components = url.pathname.split('/');
-            console.log(`url ${url} pathname: ${url.pathname} components: ${JSON.stringify(components)}`);
             return components[1];
         }
 
@@ -43,5 +42,18 @@
             }
         }
         window.onload = setActive;
+
+        function setDocHeight() {
+            document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
+        };
+
+        window.addEventListener('resize', function () {
+            setDocHeight();
+        });
+        window.addEventListener('orientationchange', function () {
+            setDocHeight();
+        });
+
+        setDocHeight();
     </script>
 </head>

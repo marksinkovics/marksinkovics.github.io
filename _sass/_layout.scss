@@ -50,12 +50,17 @@ body {
 
 .container {
     width: calc(100% - 250px);
-    height: calc(100% - $header-height);
+    min-height: vh(100);
     margin-left: 250px;
-    margin-top: $header-height;
-    margin-left: 250px;
-    transition: 0.5s;
     padding: 15px;
+    padding-top: $header-height;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.content {
+    flex: 1 0 auto;
 }
 
 .nav-panel {
@@ -75,7 +80,6 @@ body {
         font-size: 25px;
         color: white;
         display: block;
-        transition: 0.5s;
 
         &:hover {
             color: $link-hover-color;
@@ -103,7 +107,6 @@ body {
     left: 250px;
     width: calc(100% - 250px);
     background-color: #f1f1f1;
-    // border: 1px solid black;
     display: flex;
     flex-direction: row;
     transition: 0.5s;
@@ -166,6 +169,7 @@ body {
     }
 
     .container-open {
+
         width: 100%;
         margin-left: 250px;
     }
@@ -182,7 +186,8 @@ body {
 
 footer {
     padding-top: 15px;
-    font-size: 0.9em;
+    padding-bottom: 15px;
+    font-size: 0.7em;
     text-align: left;
-    height: $header-height;
+    flex-shrink: 0;
 }
