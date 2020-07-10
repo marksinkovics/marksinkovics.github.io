@@ -2,9 +2,7 @@
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-weight: 600;
     color: $heading-font-color;
     font-family: $heading-font;
@@ -14,38 +12,34 @@ h3 {
     overflow: hidden;
   }
 h1 {
-    color: $main;
     font-size: 2.5em;
-    a,
-    a:visited {
-        text-decoration: none;
-        color: $main;
-    }
 }
+
 h2 {
     font-size: 2em;
 }
 
-a,
-a:visited {
+a, a:visited {
     color: $link-color;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bold;
+
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
 }
 
-a:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-}
+
 
 body {
     margin: 0;
     padding: 0;
-    color: $font-color;
     font-family: $font-style;
     font-size: 1.1em;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    color: $font-color;
 }
 
 .container {
@@ -57,6 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     transition: 0.5s;
+    background-color: $header-background-color;
 }
 
 .content {
@@ -106,12 +101,12 @@ body {
     height: $header-height;
     left: 250px;
     width: calc(100% - 250px);
-    background-color: #f1f1f1;
+    background-color: $background-color;
     display: flex;
     flex-direction: row;
     transition: 0.5s;
     align-items: center;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 15px 30px -16px $header-shadow-color;
 
     .hamburger-menu-button {
         display: none;
@@ -121,6 +116,8 @@ body {
         padding-left: 10px;
         padding-right: 10px;
     }
+
+
 }
 
 .row {

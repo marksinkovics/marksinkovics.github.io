@@ -1,31 +1,41 @@
+:root {
+    --font-color: #262626;
+    --heading-font-color: #425469;
+    --background-color: #f5f5f5;
+    --menu-background-color: #263238;
+    --header-background-color: #f5f5f5;
+    --header-shadow-color: #00000033;
+    --link-color: #767b81;
+    --link-hover-color: #EACB00;
+}
+
+[data-theme="dark"] {
+    --font-color: white;
+    --heading-font-color: #A1AAB4;
+    --background-color: #1b1b1b;
+    --menu-background-color: #212121;
+    --header-background-color: #1b1b1b;
+    --header-shadow-color: rgba(255, 255, 255, 0.2);
+    --link-color: #8B8F94;
+    --link-hover-color: #DBAC00;
+}
+
+
+
 $font-style: 'Open Sans', sans-serif;
-$font-color: #262626;
+$font-color: var(--font-color);
+$link-color: var(--link-color);
+$link-hover-color: var(--link-hover-color);
 
-$heading-font: 'Muli', sans-serif;
-$heading-font-color: #425469;
+$heading-font: 'Open Sans', sans-serif;
+$heading-font-color: var(--heading-font-color);
 
-$menu-background-color: #0D1821;
+$menu-background-color: var(--menu-background-color);
+$background-color: var(--background-color);
+$header-background-color: var(--header-background-color);
+$header-shadow-color: var(--header-shadow-color);
 
-$main: #EACB00;
-
-// $content-width: 800px;
-// // $main: #19CCAA;
-// $main: #EACB00;
-$link-color: #767b81;
-$link-hover-color: $main;
-// $light: #E7EDF4;
-// // $header:  #1D1425;
-// $header:  #01172F;
-// $sidenav-width: 250px;
 $header-height: 65px;
-
-// *,
-// *::before,
-// *::after {
-//     -webkit-box-sizing: border-box;
-//     -moz-box-sizing: border-box;
-//     box-sizing: border-box;
-// }
 
 @function vh($quantity) {
     @return calc(var(--vh, 1vh) * #{$quantity});
