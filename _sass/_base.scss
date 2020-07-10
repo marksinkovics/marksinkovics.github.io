@@ -31,10 +31,10 @@ $heading-font: 'Open Sans', sans-serif;
 $heading-font-color: var(--heading-font-color);
 
 $menu-background-color: var(--menu-background-color);
+$menu-width: 250px;
 $background-color: var(--background-color);
 $header-background-color: var(--header-background-color);
 $header-shadow-color: var(--header-shadow-color);
-
 $header-height: 65px;
 
 @function vh($quantity) {

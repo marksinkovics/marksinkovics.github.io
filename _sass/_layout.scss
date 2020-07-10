@@ -30,8 +30,6 @@ a, a:visited {
     }
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
@@ -40,18 +38,18 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     color: $font-color;
+    background-color: $background-color;
 }
 
 .container {
-    width: calc(100% - 250px);
+    width: calc(100% - #{$menu-width});
     min-height: vh(100);
-    margin-left: 250px;
+    margin-left: $menu-width;
     padding: 15px;
     padding-top: $header-height;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
-    background-color: $header-background-color;
 }
 
 .content {
@@ -62,7 +60,7 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 250px;
+    width: $menu-width;
     height: 100%;
     background-color: $menu-background-color;
     position: fixed;
@@ -99,9 +97,9 @@ body {
     position: fixed;
     top: 0px;
     height: $header-height;
-    left: 250px;
-    width: calc(100% - 250px);
-    background-color: $background-color;
+    left: $menu-width;
+    width: calc(100% - #{$menu-width});
+    background-color: $header-background-color;
     display: flex;
     flex-direction: row;
     transition: 0.5s;
@@ -137,7 +135,7 @@ body {
 
 @media screen and (max-width: 600px) {
     .nav-panel {
-        left: -250px;
+        left: -$menu-width;
         .closebtn {
             display: block;
         }
@@ -157,7 +155,7 @@ body {
 
     .header-open {
         width: 100%;
-        left: 250px;
+        left: $menu-width;
     }
 
     .container {
@@ -168,7 +166,7 @@ body {
     .container-open {
 
         width: 100%;
-        margin-left: 250px;
+        margin-left: $menu-width;
     }
 
     .row-open {
@@ -176,7 +174,7 @@ body {
     }
 
     .cover-open {
-        left: 250px;
+        left: $menu-width;
         display: block;
     }
 }
