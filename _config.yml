@@ -6,7 +6,7 @@ baseUrl: ""
 url: "https://marksinkovics.github.io"
 
 # theme: jekyll-theme-minimal
-# github: [metadata]
+github: [metadata]
 plugins:
   - jekyll-github-metadata
   - jemoji
@@ -18,11 +18,16 @@ plugins:
 
 include: ['_pages']
 
+permalink: pretty
+
 kramdown:
   input: GFM
 
 # Collection
 collections:
+  pages:
+    output: true
+    permalink: /
   projects:
     output: true
     permalink: /projects/:path/
