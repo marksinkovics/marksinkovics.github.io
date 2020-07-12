@@ -2,7 +2,13 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
+html {
+    min-height: 280px;
+}
+
+h1,
+h2,
+h3 {
     font-weight: 600;
     color: $heading-font-color;
     font-family: $heading-font;
@@ -10,7 +16,7 @@ h1, h2, h3 {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-  }
+}
 h1 {
     font-size: 2.5em;
 }
@@ -19,7 +25,8 @@ h2 {
     font-size: 2em;
 }
 
-a, a:visited {
+a,
+a:visited {
     color: $link-color;
     text-decoration: none;
     font-weight: bold;
@@ -39,6 +46,7 @@ body {
     -webkit-font-smoothing: antialiased;
     color: $font-color;
     background-color: $background-color;
+    min-height: 500px;
 }
 
 .container {
@@ -91,6 +99,53 @@ body {
         font-size: 36px;
         margin-left: 50px;
     }
+
+    .nav-bottom-bar {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: 2rem 2.5rem 1.6rem;
+        display: flex;
+        flex-direction: row;
+
+        .icon-border {
+            background-color: white;
+            width: 5px;
+            height: 5px;
+            margin-left: .25rem;
+            margin-right: .25rem;
+            border-radius: 50%;
+            margin-top: .75rem;
+        }
+
+        .themeModeSwitcher {
+
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"] + label {
+                background-color: white;
+                mask: asset_url("dark_mode.svg") no-repeat;
+                -webkit-mask: asset_url("dark_mode.svg") no-repeat;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                padding: 0 0 0 0px;
+            }
+            input[type="checkbox"]:checked + label {
+                background-color: white;
+                mask: asset_url("light_mode.svg") no-repeat;
+                -webkit-mask: asset_url("light_mode.svg") no-repeat;
+                width: 25px;
+                height: 25px;
+                display: inline-block;
+                padding: 0 0 0 0px;
+            }
+        }
+    }
+
+
 }
 
 .header {
@@ -114,8 +169,6 @@ body {
         padding-left: 10px;
         padding-right: 10px;
     }
-
-
 }
 
 .row {
@@ -164,7 +217,6 @@ body {
     }
 
     .container-open {
-
         width: 100%;
         margin-left: $menu-width;
     }

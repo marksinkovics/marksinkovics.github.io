@@ -6,10 +6,13 @@
             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
     {% endfor %}
-    <div>
-        <input type="checkbox" id="themeSwitcher" name="themeSwitcher" onclick="switchTheme();" />
-        <label for="scales">Dark theme?</label>
-    </div>
+    <footer class="nav-bottom-bar">
+        <div class="themeModeSwitcher">
+            <input type="checkbox" id="themeSwitcher" onclick="switchTheme();" />
+            <label for="themeSwitcher" />
+        </div>
+        <span class="icon-border"></span>
+    </footer>
     <div class="header" id="header">
         <span class="hamburger-menu-button" style="font-size:30px;cursor:pointer" onclick="openNavigation()">&#9776;</span>
         <h2>{{ page.title }}</h2>

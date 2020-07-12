@@ -8,13 +8,16 @@ url: "https://marksinkovics.github.io"
 # theme: jekyll-theme-minimal
 # github: [metadata]
 plugins:
-  - "jekyll-github-metadata"
+  - jekyll-github-metadata
   - jemoji
 
 # Build settings
-sass:
-  sass_dir: _sass
+# sass:
+#   sass_dir: _sass
+#   style: compressed
+
 include: ['_pages']
+
 kramdown:
   input: GFM
 
@@ -23,3 +26,14 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+
+assets:
+  prefix: "/assets"
+  cache: false
+  sources:
+    - _assets/css
+    - _assets/img
+    - _assets/js
+  # compression: true
+  # gzip: true
+  # source_maps: false
