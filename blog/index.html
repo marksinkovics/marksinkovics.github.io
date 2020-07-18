@@ -1,0 +1,26 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+pagination:
+  enabled: true
+  collection: posts
+---
+<div class="blog">
+  {% if site.posts.size == 0 %}
+        <h3>No posts ... yet.</h3>
+  {% else %}
+    {% for post in paginator.posts %}
+    <div class="post-preview">
+        <h1>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h1>
+        <div class="post-meta">
+          <img class="clock" />
+          <i>{{ post.date | timeago }}</i>
+        </div>
+    </div>
+    {% endfor %}
+    {% include paginator.html %}
+  {% endif %}
+</div>

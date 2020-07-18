@@ -5,18 +5,14 @@ description: >
 baseUrl: ""
 url: "https://marksinkovics.github.io"
 
-# theme: jekyll-theme-minimal
 github: [metadata]
 plugins:
-  - jekyll-github-metadata
   - jemoji
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-timeago
 
-# Build settings
-# sass:
-#   sass_dir: _sass
-#   style: compressed
-
-include: ['_pages']
+# include: ['_pages']
 
 permalink: pretty
 
@@ -31,7 +27,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
 assets:
   prefix: "/assets"
   cache: false
@@ -42,3 +40,28 @@ assets:
   # compression: true
   # gzip: true
   # source_maps: false
+
+
+  exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - CNAME
+  - LICENSE
+
+############################################################
+# Site configuration for the Jekyll 3 Pagination Gem
+# The values here represent the defaults if nothing is set
+pagination:
+  enabled: true
+  debug: false
+  per_page: 2
+  permalink: '/page/:num/'
+  title: ':title'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+############################################################

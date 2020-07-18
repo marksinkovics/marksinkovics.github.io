@@ -7,6 +7,7 @@
     --header-shadow-color: #00000033;
     --link-color: #767b81;
     --link-hover-color: #EACB00;
+    --separator-color: #425469;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
     --header-shadow-color: rgba(255, 255, 255, 0.2);
     --link-color: #8B8F94;
     --link-hover-color: #DBAC00;
+    --separator-color: #A1AAB4;
 }
 
 
@@ -36,6 +38,8 @@ $background-color: var(--background-color);
 $header-background-color: var(--header-background-color);
 $header-shadow-color: var(--header-shadow-color);
 $header-height: 65px;
+
+$separator-color: var(--separator-color);
 
 @function vh($quantity) {
     @return calc(var(--vh, 1vh) * #{$quantity});

@@ -33,7 +33,6 @@ a:visited {
 
     &:hover {
         color: $link-hover-color;
-        text-decoration: underline;
     }
 }
 
@@ -77,7 +76,6 @@ body {
 
     a {
         padding: 8px 8px 8px 32px;
-        text-decoration: none;
         font-size: 25px;
         color: white;
         display: block;
@@ -113,10 +111,10 @@ body {
             background-color: white;
             width: 5px;
             height: 5px;
-            margin-left: .25rem;
-            margin-right: .25rem;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
             border-radius: 50%;
-            margin-top: .5rem;
+            margin-top: 0.5rem;
         }
 
         .toolbar-icon {
@@ -125,8 +123,8 @@ body {
             height: 22px;
             display: inline-block;
             padding: 0 0 0 0px;
-            margin-left: .25rem;
-            margin-right: .25rem;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
         }
 
         .github {
@@ -150,7 +148,6 @@ body {
         }
 
         .themeModeSwitcher {
-
             input[type="checkbox"] {
                 display: none;
             }
@@ -174,8 +171,6 @@ body {
             }
         }
     }
-
-
 }
 
 .header {
@@ -267,4 +262,41 @@ footer {
     font-size: 0.7em;
     text-align: left;
     flex-shrink: 0;
+}
+
+.pagination {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+        float: left;
+        padding: 8px 16px;
+    }
+}
+
+.blog {
+    h1 {
+        font-size: 1.4rem;
+        line-height: 1;
+    }
+    .post-preview {
+        .post-meta {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 5px;
+            font-size: 0.85em;
+            color: $separator-color;
+            .clock {
+                height: 15px;
+                width: 15px;
+                margin-right: 8px;
+                background-color: $separator-color;
+                mask: asset_url("clock.svg") no-repeat;
+                -webkit-mask: asset_url("clock.svg") no-repeat;
+            }
+        }
+        border-bottom: 1px solid $separator-color;
+    }
 }

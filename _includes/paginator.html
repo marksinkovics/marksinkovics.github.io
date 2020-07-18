@@ -1,0 +1,15 @@
+<div class="pagination">
+    {% if paginator.total_pages > 1 %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+      {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          {% if trail.num == paginator.page %}
+            <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}" class="active">{{ trail.num }}</a>
+          {% else %}
+            <a href="{{ trail.path | prepend: site.baseurl }}" title="{{trail.title}}">{{ trail.num }}</a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    {% endif %}
+</div>

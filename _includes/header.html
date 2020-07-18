@@ -6,6 +6,7 @@
             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
     {% endfor %}
+    <a href="{{ "/blog/" | prepend: site.baseurl }}">Blog</a>
     <footer class="nav-bottom-bar">
         <div class="themeModeSwitcher">
             <input type="checkbox" id="themeSwitcher" onclick="switchTheme();" />
@@ -15,7 +16,7 @@
         <a href="https://github.com/marksinkovics" class="toolbar-icon github"></a>
         <a href="https://twitter.com/marksinkovics" class="toolbar-icon twitter"></a>
         <a href="javascript:window.open('mailto:{{ site.email }}')" class="toolbar-icon email"></a>
-        <!-- <a href="" target="_blank" class="toolbar-icon rss"></a> -->
+        <a href="/feed.xml" target="_blank" class="toolbar-icon rss"></a>
     </footer>
     <div class="header" id="header">
         <span class="hamburger-menu-button" style="font-size:30px;cursor:pointer" onclick="openNavigation()">&#9776;</span>
