@@ -1,16 +1,19 @@
-title: Mark Sinkovics
+title: Mark Sinkovics - Personal site
+author: Mark Sinkovics
+twitter: marksinkovics
+github: marksinkovics
 email: sinkovics.mark@gmail.com
 description: >
   This website contains my experiences around programming
 baseUrl: ""
 url: "https://marksinkovics.github.io"
 
-github: [metadata]
 plugins:
   - jemoji
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-timeago
+  - jekyll-sitemap
 
 # include: ['_pages']
 
@@ -30,6 +33,7 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+
 assets:
   prefix: "/assets"
   cache: false
@@ -40,8 +44,6 @@ assets:
   # compression: true
   # gzip: true
   # source_maps: false
-
-
   exclude:
   - README.md
   - .gitignore
@@ -57,7 +59,7 @@ assets:
 pagination:
   enabled: true
   debug: false
-  per_page: 2
+  per_page: 10
   permalink: '/page/:num/'
   title: ':title'
   sort_reverse: true
