@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+header_title: Projects
 permalink: /projects/
 ---
 

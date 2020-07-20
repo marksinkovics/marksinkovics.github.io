@@ -56,7 +56,7 @@ body {
     padding-top: $header-height;
     display: flex;
     flex-direction: column;
-    transition: 0.5s;
+    transition: 0.5s margin-left;
 }
 
 .content {
@@ -269,6 +269,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
     a {
         float: left;
         padding: 8px 16px;
@@ -278,7 +279,6 @@ footer {
 .blog {
     h1 {
         font-size: 1.4rem;
-        line-height: 1;
     }
     .post-preview {
         .post-meta {
@@ -287,12 +287,12 @@ footer {
             align-items: center;
             margin-bottom: 5px;
             font-size: 0.85em;
-            color: $separator-color;
+            color: $font-color-secondary;
             .clock {
                 height: 15px;
                 width: 15px;
                 margin-right: 8px;
-                background-color: $separator-color;
+                background-color: $font-color-secondary;
                 mask: asset_url("clock.svg") no-repeat;
                 -webkit-mask: asset_url("clock.svg") no-repeat;
             }

@@ -7,6 +7,7 @@
         {% endif %}
     {% endfor %}
     <a href="{{ "/blog/" | prepend: site.baseurl }}">Blog</a>
+    <a href="{{ "/tags/" | prepend: site.baseurl }}">Tags</a>
     <footer class="nav-bottom-bar">
         <div class="themeModeSwitcher">
             <input type="checkbox" id="themeSwitcher" onclick="switchTheme();" />
@@ -20,6 +21,8 @@
     </footer>
     <div class="header" id="header">
         <span class="hamburger-menu-button" style="font-size:30px;cursor:pointer" onclick="openNavigation()">&#9776;</span>
-        <h2>{{ page.title }}</h2>
+        {% if page.header_title %}
+            <h2>{{ page.header_title }}</h2>
+        {% endif %}
     </div>
 </div>

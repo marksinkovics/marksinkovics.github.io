@@ -1,0 +1,19 @@
+---
+layout: page
+permalink: /tags/
+title: Tags
+header_title: Tags
+---
+
+<div>
+  {% if site.posts.size == 0 %}
+  <h3>No tags ... yet.</h3>
+  {% else %}
+  <ul>
+    {% for tag in site.tags %}
+      {% capture tag_name %}{{ tag | first }}{% endcapture %}
+      <li><a href="/tags/{{tag_name}}">#{{tag_name}}</a> ({{ site.tags[tag_name].size }})</li>
+    {% endfor %}
+  <ul>
+  {% endif %}
+</div>
