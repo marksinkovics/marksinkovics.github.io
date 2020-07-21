@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Sudoku - a puzzle game
+header_title: Sudoku - a puzzle game
 permalink: /projects/sudoku
 type: main
 ---

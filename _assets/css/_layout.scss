@@ -123,8 +123,8 @@ body {
             height: 22px;
             display: inline-block;
             padding: 0 0 0 0px;
-            margin-left: 0.25rem;
-            margin-right: 0.25rem;
+            margin-left: 0.20rem;
+            margin-right: 0.20rem;
         }
 
         .github {
@@ -143,8 +143,15 @@ body {
         }
 
         .email {
+            width: 24px;
+            height: 24px;
             mask: asset_url("email.svg") no-repeat;
             -webkit-mask: asset_url("email.svg") no-repeat;
+        }
+
+        .linkedin {
+            mask: asset_url("linkedin.svg") no-repeat;
+            -webkit-mask: asset_url("linkedin.svg") no-repeat;
         }
 
         .themeModeSwitcher {

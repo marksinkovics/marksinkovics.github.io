@@ -1,6 +1,7 @@
 ---
 layout: page
 title: API frameworks
+header_title: API frameworks
 permalink: /projects/apiframeworks
 type: main
 ---

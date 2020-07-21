@@ -1,6 +1,7 @@
 ---
 layout: page
 title: atlassian-cli
+header_title: atlassian-cli
 permalink: /projects/atlassian-cli
 subtitle: "the \"missing\" command-line interface for Atlassian products :rocket:"
 type: main

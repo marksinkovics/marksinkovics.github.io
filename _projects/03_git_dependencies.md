@@ -1,6 +1,7 @@
 ---
 layout: page
 title: git-dependencies
+header_title: git-dependencies
 permalink: /projects/git-dependencies
 type: main
 ---
