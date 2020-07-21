@@ -37,14 +37,11 @@ collections:
 
 assets:
   prefix: "/assets"
-  cache: false
   sources:
     - _assets/css
     - _assets/img
     - _assets/js
-  # compression: true
-  # gzip: true
-  # source_maps: false
+  source_maps: true
   exclude:
   - README.md
   - .gitignore
