@@ -1,0 +1,51 @@
+:root {
+    --font-color: #262626;
+    --font-color-secondary: #425469;
+    --heading-font-color: #425469;
+    --background-color: #f5f5f5;
+    --menu-background-color: #263238;
+    --header-background-color: #f5f5f5;
+    --header-shadow-color: #00000033;
+    --link-color: #767b81;
+    --link-hover-color: #EACB00;
+    --separator-color: #D6D6D6;
+
+}
+
+[data-theme="dark"] {
+    --font-color: white;
+    --font-color-secondary: #A1AAB4;
+    --heading-font-color: #A1AAB4;
+    --background-color: #1b1b1b;
+    --menu-background-color: #212121;
+    --header-background-color: #1b1b1b;
+    --header-shadow-color: rgba(255, 255, 255, 0.2);
+    --link-color: #8B8F94;
+    --link-hover-color: #DBAC00;
+    --separator-color: #3D3D3D;
+}
+
+
+
+$font-style: 'Open Sans', sans-serif;
+$font-color: var(--font-color);
+$font-color-secondary: var(--font-color-secondary);
+$link-color: var(--link-color);
+$link-hover-color: var(--link-hover-color);
+
+$heading-font: 'Open Sans', sans-serif;
+$heading-font-color: var(--heading-font-color);
+
+$menu-background-color: var(--menu-background-color);
+$menu-width: 250px;
+$background-color: var(--background-color);
+$header-background-color: var(--header-background-color);
+$header-shadow-color: var(--header-shadow-color);
+$header-height: 65px;
+
+$separator-color: var(--separator-color);
+
+
+@function vh($quantity) {
+    @return calc(var(--vh, 1vh) * #{$quantity});
+}
