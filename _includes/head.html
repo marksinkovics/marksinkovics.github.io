@@ -5,6 +5,10 @@
         content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     {% asset main.css !type %}
+
+    {% asset syntax.dark.css !type id="syntax.dark" disabled="true" %}
+    {% asset syntax.light.css !type id="syntax.light" disabled="true" %}
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>

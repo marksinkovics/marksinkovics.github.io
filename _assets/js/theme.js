@@ -21,6 +21,8 @@ function setTheme(mode) {
     }
 
     document.getElementById('themeSwitcher').checked = newMode === THEME_MODE_DARK;
+    document.getElementById("syntax.dark").disabled = newMode !== THEME_MODE_DARK;
+    document.getElementById("syntax.light").disabled = newMode === THEME_MODE_DARK;
 }
 
 window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
