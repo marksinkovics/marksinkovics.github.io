@@ -18,7 +18,7 @@ pagination:
         </h1>
         <div class="post-meta">
           <img class="clock" />
-          <i>{{ post.date | timeago }}</i>
+          <i>{{ post.date | date: "%B %-d, %Y"}}</i>
         </div>
     </div>
     {% endfor %}
