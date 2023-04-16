@@ -16,8 +16,6 @@ plugins:
   - jekyll-timeago
   - jekyll-sitemap
 
-# include: ['_pages']
-
 permalink: pretty
 
 markdown: kramdown
@@ -52,6 +50,11 @@ assets:
   - .sass-cache
   - CNAME
   - LICENSE
+
+include:
+  - "images/sudoku"
+  - "images/FeatherOS"
+  - "images/Atakama"
 
 ############################################################
 # Site configuration for the Jekyll 3 Pagination Gem

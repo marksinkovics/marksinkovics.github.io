@@ -9,6 +9,7 @@ group :jekyll_plugins do
     gem 'jekyll-paginate-v2'
     gem 'jekyll-timeago'
     gem 'jekyll-sitemap'
-    gem "kramdown"
-    gem "rouge"
+    gem 'kramdown'
+    gem 'rouge'
+    gem 'jekyll-toc'
 end
