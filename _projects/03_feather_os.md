@@ -3,7 +3,7 @@ layout: page
 title: Feather OS
 header_title: Feather OS
 permalink: /projects/feather-os
-subtitle: "x86-64 bit OS"
+subtitle: "64 bit OS for x86-64 architecture"
 type: main
 ---
 
