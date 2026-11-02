@@ -1,0 +1,7 @@
+# Additions to Chirpy's English strings. Jekyll merges this file with the
+# theme's _data/locales/en.yml, so only the keys added here are listed.
+
+tabs:
+  # Tab titles used in the browser-tab title (the theme only knows its own tabs)
+  projects: Projects
+  contact: Contact
