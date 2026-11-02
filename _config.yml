@@ -1,0 +1,161 @@
+# The Site Configuration
+# Based on chirpy-starter v7.6.0 › https://github.com/cotes2020/chirpy-starter
+
+# Import the theme
+theme: jekyll-theme-chirpy
+
+lang: en
+
+# Change to your timezone › https://zones.arilyn.cc
+# Empty means UTC on the build machine.
+timezone:
+
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
+
+title: Mark Sinkovics
+
+tagline: Mobile software developer. Notes on programming and my side projects.
+
+description: >-
+  Mark Sinkovics' personal site: posts about programming, mostly on Apple
+  platforms, and pages for side projects like Runlight and Sudoku.
+
+# Must match CNAME. Used for canonical links, the sitemap and the feed.
+url: "https://marksinkovics.com"
+
+github:
+  username: marksinkovics
+
+twitter:
+  username: marksinkovics
+
+social:
+  # Default author of the posts and the copyright owner in the footer
+  name: Mark Sinkovics
+  email: sinkovics.mark@gmail.com
+  links:
+    # The first element serves as the copyright owner's link
+    - https://github.com/marksinkovics
+    - https://twitter.com/marksinkovics
+    - https://www.linkedin.com/in/marksinkovics
+
+# ↑ --------------------------
+# The end of `jekyll-seo-tag` settings
+
+# No analytics: the site, like the apps, collects nothing.
+analytics:
+
+pageviews:
+  provider:
+
+# Empty follows the system color scheme, with a toggle in the sidebar.
+theme_mode: # [light | dark]
+
+cdn:
+
+# The avatar on the sidebar, local or CORS resource.
+# Placeholder with initials; swap in a photo when there is one.
+avatar: /assets/img/avatar.svg
+
+social_preview_image:
+
+# The global switch for TOC in posts (Chirpy shows a TOC on posts only)
+toc: true
+
+comments:
+  provider:
+
+assets:
+  self_host:
+    enabled:
+    env:
+
+# Off: no service worker, so visitors never see a stale cached copy of a
+# page such as a privacy policy.
+pwa:
+  enabled: false
+
+paginate: 10
+
+baseurl: ""
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+  # App and side-project pages. Each sets its own `permalink`, because the
+  # old URLs (some submitted to the App Store) must not change.
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: page
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - CLAUDE.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
