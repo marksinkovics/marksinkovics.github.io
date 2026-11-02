@@ -1,0 +1,14 @@
+{% comment %}
+  Shows every PNG in a folder as a gallery, sorted by file name.
+  Usage: {% include image-gallery.html folder="images/sudoku" %}
+  Chirpy turns each image into a link that opens it full size.
+{% endcomment %}
+{% assign folder = '/' | append: include.folder | append: '/' %}
+{% assign images = site.static_files | where: 'extname', '.png' | sort: 'path' %}
+<div class="image-gallery">
+  {% for file in images %}
+    {% if file.path contains folder %}
+      <img src="{{ file.path | relative_url | uri_escape }}" alt="{{ file.basename | replace: '_', ' ' }}">
+    {% endif %}
+  {% endfor %}
+</div>

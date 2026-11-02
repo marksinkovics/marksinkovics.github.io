@@ -1,0 +1,39 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* Screenshot gallery for project pages (_includes/image-gallery.html) */
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  > * {
+    flex: 1 1 12rem;
+    margin: 0 !important;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* App Store badge */
+.app-store-badge img {
+  height: 3rem;
+  width: auto;
+}
