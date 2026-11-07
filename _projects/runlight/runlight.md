@@ -18,6 +18,16 @@ It's a menu bar app on the Mac, and an app with widgets on iPhone and iPad.
 - **Widgets:** the status light and Up Next on your Home Screen, or a small status on your Lock Screen.
 - **Quiet by design:** snooze a merge request until it changes, ignore a pipeline until the next run, or mute a whole project.
 
+## Screenshots
+
+### Mac
+
+{% include image-gallery.html folder="images/runlight/mac" wide=true %}
+
+### iPhone
+
+{% include image-gallery.html folder="images/runlight/iphone" %}
+
 ## Private by design
 
 Runlight only needs read access and never changes anything on GitLab. It talks to your GitLab directly: there is no Runlight server, and nothing is collected. Accounts, watched projects and snoozes sync between your devices through your own iCloud. See the [privacy policy](/projects/runlight/privacy-policy) for details.

@@ -3,7 +3,7 @@ title: Sudoku - a puzzle game
 subtitle: Offline Sudoku for iPhone and iPad
 permalink: /projects/sudoku
 type: main
-order: 2
+order: 3
 ---
 
 ## How is it started

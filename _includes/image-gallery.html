@@ -1,14 +1,38 @@
 {% comment %}
   Shows every PNG in a folder as a gallery, sorted by file name.
   Usage: {% include image-gallery.html folder="images/sudoku" %}
+  Add wide=true for landscape screenshots (e.g. Mac), which get bigger tiles.
+  A leading number in the file name sets the order and is left out of the
+  alt text: "2_up_next.png" becomes "up next".
+  Captions (title and description) come from _data/screenshots.yml, keyed
+  by the image's path; the title is also used as the alt text.
   Chirpy turns each image into a link that opens it full size.
 {% endcomment %}
 {% assign folder = '/' | append: include.folder | append: '/' %}
 {% assign images = site.static_files | where: 'extname', '.png' | sort: 'path' %}
-<div class="image-gallery">
+<div class="image-gallery{% if include.wide %} image-gallery-wide{% endif %}">
   {% for file in images %}
     {% if file.path contains folder %}
-      <img src="{{ file.path | relative_url | uri_escape }}" alt="{{ file.basename | replace: '_', ' ' }}">
+      {% assign key = file.path | remove_first: '/' %}
+      {% assign caption = site.data.screenshots[key] %}
+      {% assign words = file.basename | split: '_' %}
+      {% assign number = words.first | plus: 0 %}
+      {% if caption.title %}
+        {% assign alt = caption.title %}
+      {% elsif number > 0 %}
+        {% assign alt = words | shift | join: ' ' %}
+      {% else %}
+        {% assign alt = words | join: ' ' %}
+      {% endif %}
+      <figure>
+        <img src="{{ file.path | relative_url | uri_escape }}" alt="{{ alt | escape }}">
+        {% if caption %}
+          <figcaption>
+            {% if caption.title %}<strong>{{ caption.title | escape }}</strong>{% endif %}
+            {% if caption.description %}<span>{{ caption.description | escape }}</span>{% endif %}
+          </figcaption>
+        {% endif %}
+      </figure>
     {% endif %}
   {% endfor %}
 </div>

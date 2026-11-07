@@ -16,14 +16,34 @@
 
 /* Screenshot gallery for project pages (_includes/image-gallery.html) */
 .image-gallery {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   gap: 1rem;
   margin-bottom: 1.5rem;
 
+  &.image-gallery-wide {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+
   > * {
-    flex: 1 1 12rem;
     margin: 0 !important;
+  }
+
+  figure a.popup {
+    display: block;
+    margin: 0;
+  }
+
+  figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text-muted-color);
+
+    strong {
+      display: block;
+      color: var(--text-color);
+    }
   }
 
   img {

@@ -1,0 +1,57 @@
+# Captions for the screenshot galleries (_includes/image-gallery.html).
+# Key: the image's path from the site root. Both fields are optional;
+# an image without an entry is shown without a caption.
+
+# Runlight, Mac
+images/runlight/mac/1_menu_bar.png:
+  title: Menu bar
+  description: One light shows whether everything passed, with what needs you next, your pipelines and your merge requests one click away.
+images/runlight/mac/2_up_next.png:
+  title: Up Next
+  description: Everything that needs you from every account, in one window, each with the reason why.
+images/runlight/mac/3_pipelines.png:
+  title: Pipelines
+  description: The latest pipeline on each branch, with the failing job and its log.
+images/runlight/mac/4_reviews.png:
+  title: Needs my review
+  description: Merge requests waiting for you, with approvals, open threads and the pipeline status.
+
+# Runlight, iPhone
+images/runlight/iphone/1_up_next.png:
+  title: Up Next
+  description: Broken builds first, then reviews and merges.
+images/runlight/iphone/2_pipelines.png:
+  title: Pipelines
+  description: Running, passed or failed, per branch.
+images/runlight/iphone/3_merge_requests.png:
+  title: Merge requests
+  description: Waiting for your review, and what's still blocking your own.
+images/runlight/iphone/4_widgets.png:
+  title: Widgets
+  description: The status light and Up Next on the Home Screen and Lock Screen.
+
+# Feather OS
+images/FeatherOS/1_boot.png:
+  title: Booting
+  description: The kernel checks itself, brings up four CPUs and the network, then init starts the shell. The status bar shows the console, busy CPUs and the time.
+images/FeatherOS/2_shell_and_pipes.png:
+  title: Shell and pipes
+  description: grep, sort, head and wc in pipelines, redirection to a file, the calculator, and ps.
+images/FeatherOS/3_top_on_four_CPUs.png:
+  title: top
+  description: Four prime-counting processes keep all four CPUs busy.
+images/FeatherOS/4_vi.png:
+  title: vi
+  description: Editing the hosts file in the built-in vi.
+images/FeatherOS/5_networking.png:
+  title: Networking
+  description: IPv4 and IPv6 addresses from DHCP and SLAAC, DNS lookups, ping, and an HTTP fetch from the internet.
+images/FeatherOS/6_game_of_life_in_Swift.png:
+  title: Game of Life
+  description: Conway's Game of Life, written in Embedded Swift.
+images/FeatherOS/7_Swift_concurrency.png:
+  title: Swift concurrency
+  description: Swift programs using JSON and regular expressions, and async/await, tasks and actors running on four threads.
+images/FeatherOS/8_job_control.png:
+  title: Job control
+  description: Ctrl+Z stops a job, bg and jobs manage it, and kill ends it. ls /dev lists the virtual consoles and pseudo-terminals.

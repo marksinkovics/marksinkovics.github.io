@@ -3,7 +3,7 @@ title: Compressor
 subtitle: Huffman coding compressor in C++
 permalink: /projects/compressor
 type: main
-order: 3
+order: 4
 ---
 
 I was interesting in how lossless compressions works, and as a hobby project I implemented a [Huffman coding](https://en.wikipedia.org/wiki/Huffman_coding) based compressor, with the necessary command line tools in C++.
