@@ -55,3 +55,11 @@ images/FeatherOS/7_Swift_concurrency.png:
 images/FeatherOS/8_job_control.png:
   title: Job control
   description: Ctrl+Z stops a job, bg and jobs manage it, and kill ends it. ls /dev lists the virtual consoles and pseudo-terminals.
+
+# Post: Automating App Store screenshots
+assets/img/posts/app-store-screenshots/1_before.png:
+  title: Before
+  description: What the UI test captures, with sample data and a clean status bar.
+assets/img/posts/app-store-screenshots/2_after.png:
+  title: After
+  description: The same screenshot framed by the Swift script, ready for the App Store.
